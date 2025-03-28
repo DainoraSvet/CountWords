@@ -33,6 +33,16 @@ public class MainActivity extends AppCompatActivity {
         button = findViewById(R.id.btn);
         textView = findViewById(R.id.result_text);
 
+        //spinner options
+        String[] options={
+                getString(R.string.option_words),
+                getString(R.string.option_characters)
+        };
+
+        //adapter for spinner
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, options);
+        spinner.setAdapter(adapter);
+
         //button click listener
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,9 +60,21 @@ public class MainActivity extends AppCompatActivity {
                 String selectedOption = spinner.getSelectedItem().toString();
 
                 //text analyzer
+                TextAnalyzer analyzer = new TextAnalyzer();
+
+                //spinner choices
+                String choice = spinner.getSelectedItem().toString();
 
                 //count words or characters based on selected option
+                if (choice.equals(getString(R.string.option_words))) {
+                    int wordCount = analyzer.countWords(text);
+                    textView.setText(String.valueOf(wordCount));
+                } else if (choice.equals(getString(R.string.option_characters))) {
+                    int characterCount = analyzer.countCharacters(text);
+                    textView.setText(String.valueOf(characterCount));
+                } else {
 
+                }
             }
         });
     }
