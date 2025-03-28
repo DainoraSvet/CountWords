@@ -4,22 +4,17 @@ public class TextAnalyzer {
     public int countWords(String text) {
         if (text == null || text.isEmpty())
             return 0;
+        //replace all punctuation with spaces
+        text = text.replaceAll("[.,!?;:\"()\\[\\]{}]", "");
+        //split text into words
         String[] words = text.trim().split("\\s+");
         return words.length;
     }
 
     public int countCharacters(String text) {
-        int counter = 0;
         if (text == null || text.isEmpty())
             return 0;
-
-        for (char c : text.toCharArray()) {
-            if (Character.isLetterOrDigit(c)) {
-                counter++;
-            }
-        }
-
-        return counter;
+        return text.length();
     }
 
     private boolean isPunctuation(char c) {
