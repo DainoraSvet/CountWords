@@ -156,5 +156,15 @@ public class ExampleUnitTest {
         assertEquals(expectedResult, actualResult);
     }
 
+    @Test
+    public void given_onlySymbols_string_when_CountCharacters_return_three() {
+        TextAnalyzer analyzer = new TextAnalyzer();
+
+        String given = "   ";
+        int expectedResult = 3;
+        int actualResult = analyzer.countCharacters(given);
+        assertEquals(expectedResult, actualResult);
+    }
+
 
 }
