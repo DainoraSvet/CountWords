@@ -84,4 +84,15 @@ public class ExampleUnitTest {
         int actualResult = analyzer.countWords(given);
         assertEquals(expectedResult, actualResult);
     }
+
+    //Characters test
+    @Test
+    public void given_empty_string_when_CountCharacters_return_zero() {
+        TextAnalyzer analyzer = new TextAnalyzer();
+
+        String given = "";
+        int expectedResult = 0;
+        int actualResult = analyzer.countCharacters(given);
+        assertEquals(expectedResult, actualResult);
+    }
 }
