@@ -106,5 +106,14 @@ public class ExampleUnitTest {
         assertEquals(expectedResult, actualResult);
     }
 
+    @Test
+    public void given_onlySpaces_string_when_CountCharacters_return_one() {
+        TextAnalyzer analyzer = new TextAnalyzer();
+
+        String given = " ";
+        int expectedResult = 1;
+        int actualResult = analyzer.countCharacters(given);
+        assertEquals(expectedResult, actualResult);
+    }
 
 }
