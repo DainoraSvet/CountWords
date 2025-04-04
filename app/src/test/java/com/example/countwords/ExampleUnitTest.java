@@ -15,6 +15,7 @@ public class ExampleUnitTest {
         assertEquals(4, 2 + 2);
     }
 
+    //Words test
     @Test
     public void given_empty_string_when_CountWords_return_zero(){
         TextAnalyzer analyzer = new TextAnalyzer();
@@ -30,6 +31,26 @@ public class ExampleUnitTest {
 
         String given = "Labas pasauli";
         int expectedResult = 2;
+        int actualResult = analyzer.countWords(given);
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void given_normalText_string_when_CountWords_return_correctWordCount() {
+        TextAnalyzer analyzer = new TextAnalyzer();
+
+        String given = "Labas pasauli, ar viskas gerai?";
+        int expectedResult = 5;
+        int actualResult = analyzer.countWords(given);
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void given_onlySpaces_string_when_CountWords_return_zero() {
+        TextAnalyzer analyzer = new TextAnalyzer();
+
+        String given = "    ";
+        int expectedResult = 0;
         int actualResult = analyzer.countWords(given);
         assertEquals(expectedResult, actualResult);
     }
