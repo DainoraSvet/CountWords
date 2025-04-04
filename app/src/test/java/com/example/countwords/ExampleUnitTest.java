@@ -74,4 +74,14 @@ public class ExampleUnitTest {
         int actualResult = analyzer.countWords(given);
         assertEquals(expectedResult, actualResult);
     }
+
+    @Test
+    public void given_null_string_when_CountWords_return_zero() {
+        TextAnalyzer analyzer = new TextAnalyzer();
+
+        String given = null;
+        int expectedResult = 0;
+        int actualResult = analyzer.countWords(given);
+        assertEquals(expectedResult, actualResult);
+    }
 }
