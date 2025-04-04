@@ -95,4 +95,16 @@ public class ExampleUnitTest {
         int actualResult = analyzer.countCharacters(given);
         assertEquals(expectedResult, actualResult);
     }
+
+    @Test
+    public void given_fiveCharacters_string_when_CountCharacters_return_five() {
+        TextAnalyzer analyzer = new TextAnalyzer();
+
+        String given = "Labas";
+        int expectedResult = 5;
+        int actualResult = analyzer.countCharacters(given);
+        assertEquals(expectedResult, actualResult);
+    }
+
+
 }
