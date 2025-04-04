@@ -2,11 +2,13 @@ package com.example.countwords;
 
 public class TextAnalyzer {
     public int countWords(String text) {
-        if (text == null || text.trim().isEmpty())
+        if (text == null)
             return 0;
         //replace all punctuation with spaces
         text = text.replaceAll("[.,!?;:\"()\\[\\]{}]", "");
         //split text into words
+        if (text.trim().isEmpty())
+            return 0;
         String[] words = text.trim().split("\\s+");
         return words.length;
     }
