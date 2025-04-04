@@ -2,7 +2,7 @@ package com.example.countwords;
 
 public class TextAnalyzer {
     public int countWords(String text) {
-        if (text == null || text.isEmpty())
+        if (text == null || text.trim().isEmpty())
             return 0;
         //replace all punctuation with spaces
         text = text.replaceAll("[.,!?;:\"()\\[\\]{}]", "");

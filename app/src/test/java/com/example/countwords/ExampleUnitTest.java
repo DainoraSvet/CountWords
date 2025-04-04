@@ -49,7 +49,7 @@ public class ExampleUnitTest {
     public void given_onlySpaces_string_when_CountWords_return_zero() {
         TextAnalyzer analyzer = new TextAnalyzer();
 
-        String given = "    ";
+        String given = " ";
         int expectedResult = 0;
         int actualResult = analyzer.countWords(given);
         assertEquals(expectedResult, actualResult);
