@@ -14,4 +14,13 @@ public class ExampleUnitTest {
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
     }
+
+    @Test
+    public void given_empty_string_when_CountWords_return_zero(){
+        TextAnalyzer analyzer = new TextAnalyzer();
+        String given = "";
+        int expectedResult = 0;
+        int actualResult = analyzer.countWords(given);
+        assertEquals(expectedResult, actualResult);
+    }
 }
