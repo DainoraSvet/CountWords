@@ -136,4 +136,15 @@ public class ExampleUnitTest {
         assertEquals(expectedResult, actualResult);
     }
 
+    @Test
+    public void given_textWithSpacesAndSymbols_string_when_CountCharacters_return_fourteen() {
+        TextAnalyzer analyzer = new TextAnalyzer();
+
+        String given = "Labas, pasauli";
+        int expectedResult = 14;
+        int actualResult = analyzer.countCharacters(given);
+        assertEquals(expectedResult, actualResult);
+    }
+
+
 }
