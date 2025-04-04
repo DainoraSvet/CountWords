@@ -66,11 +66,11 @@ public class ExampleUnitTest {
     }
 
     @Test
-    public void given_onlyTabs_string_when_CountWords_return_zero() {
+    public void given_sentenceWithExtraSpaces_string_when_CountWords_return_zero() {
         TextAnalyzer analyzer = new TextAnalyzer();
 
-        String given = "\t\t";
-        int expectedResult = 0;
+        String given = "Labas    pasauli   ";
+        int expectedResult = 2;
         int actualResult = analyzer.countWords(given);
         assertEquals(expectedResult, actualResult);
     }
