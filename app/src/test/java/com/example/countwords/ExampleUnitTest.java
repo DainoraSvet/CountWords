@@ -146,5 +146,15 @@ public class ExampleUnitTest {
         assertEquals(expectedResult, actualResult);
     }
 
+    @Test
+    public void given_sentenceWithExtraSpaces_string_when_CountCharacters_return_fifteen() {
+        TextAnalyzer analyzer = new TextAnalyzer();
+
+        String given = "Labas pasauli  ";
+        int expectedResult = 15;
+        int actualResult = analyzer.countCharacters(given);
+        assertEquals(expectedResult, actualResult);
+    }
+
 
 }
