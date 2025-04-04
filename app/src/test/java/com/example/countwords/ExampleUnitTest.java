@@ -116,4 +116,14 @@ public class ExampleUnitTest {
         assertEquals(expectedResult, actualResult);
     }
 
+    @Test
+    public void given_null_string_when_CountCharacters_return_zero() {
+        TextAnalyzer analyzer = new TextAnalyzer();
+
+        String given = null;
+        int expectedResult = 0;
+        int actualResult = analyzer.countCharacters(given);
+        assertEquals(expectedResult, actualResult);
+    }
+
 }
