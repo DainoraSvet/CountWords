@@ -23,4 +23,14 @@ public class ExampleUnitTest {
         int actualResult = analyzer.countWords(given);
         assertEquals(expectedResult, actualResult);
     }
+
+    @Test
+    public void given_twoWords_string_when_CountWords_return_two() {
+        TextAnalyzer analyzer = new TextAnalyzer();
+
+        String given = "Labas pasauli";
+        int expectedResult = 2;
+        int actualResult = analyzer.countWords(given);
+        assertEquals(expectedResult, actualResult);
+    }
 }
