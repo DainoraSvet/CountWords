@@ -64,4 +64,14 @@ public class ExampleUnitTest {
         int actualResult = analyzer.countWords(given);
         assertEquals(expectedResult, actualResult);
     }
+
+    @Test
+    public void given_onlyTabs_string_when_CountWords_return_zero() {
+        TextAnalyzer analyzer = new TextAnalyzer();
+
+        String given = "\t\t";
+        int expectedResult = 0;
+        int actualResult = analyzer.countWords(given);
+        assertEquals(expectedResult, actualResult);
+    }
 }
