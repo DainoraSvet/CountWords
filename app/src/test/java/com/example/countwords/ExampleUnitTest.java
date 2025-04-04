@@ -166,5 +166,4 @@ public class ExampleUnitTest {
         assertEquals(expectedResult, actualResult);
     }
 
-
 }
